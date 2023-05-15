@@ -59,3 +59,40 @@
 
 // ######################################################################################################################################################
 
+// Dropdown default italic
+
+  checkDefaultOption() {
+    const selectElements = document.querySelectorAll('.dropdown')! as NodeListOf<HTMLSelectElement>;
+    selectElements.forEach(selectElement => {
+        if (selectElement.value == 'default') {
+        selectElement.classList.add('italic');
+      } else {
+        selectElement.classList.remove('italic');
+      }
+    })
+
+  }
+
+// Markup 
+/*
+  <style>
+    .italic {
+      font-style: italic;
+    }
+    
+    .not-italic {
+      font-style: normal;
+    }
+  </style>
+
+    <select class="dropdown">
+      <option selected hidden disabled value="default">Bitte wählen Sie</option>
+      <option class="not-italic" value="Ich möchte Prepaid-Tarife von klarmobil.de vermarkten">Ich möchte Prepaid-Tarife von klarmobil.de vermarkten</option>
+      <option class="not-italic" value="Ich möchte Prepaid-Tarife von klarmobil.de vermarkten">Ich möchte Prepaid-Tarife von klarmobil.de vermarkten</option>
+      <option class="not-italic" value="Ich möchte Prepaid-Tarife von klarmobil.de vermarkten">Ich möchte Prepaid-Tarife von klarmobil.de vermarkten</option>
+    </select>
+
+
+*/
+
+// ######################################################################################################################################################
